@@ -22,13 +22,13 @@ GIT_COMMIT=`git rev-parse HEAD`
 NEEDS_TAG=`git describe --contains $GIT_COMMIT 2>/dev/null`
 
 #only tag if no tag already
-#if [ -z "$NEEDS_TAG" ]; then
+if [ -z "$NEEDS_TAG" ]; then
     git tag $NEW_TAG
     echo "Tagged with $NEW_TAG"
     #git remote remove origin
     #git remote set-url origin https://abhinavvashishat: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@github.com/abhinavvashishat/react-native-starter.git
     #git remote add origin https://abhinavvashishat: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@github.com/abhinavvashishat/lakeshore.git
-    git push origin $NEW_TAG
-#else
-    #echo "Already a tag on this commit"
-#fi
+    git push origin https://abhinavvashishat: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@github.com/abhinavvashishat/lakeshore.git $NEW_TAG
+else
+    echo "Already a tag on this commit"
+fi
