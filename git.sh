@@ -25,7 +25,7 @@ NEEDS_TAG=`git describe --contains $GIT_COMMIT 2>/dev/null`
 if [ -z "$NEEDS_TAG" ]; then
     git tag -a $NEW_TAG -m $NEW_TAG
     echo "Tagged with $NEW_TAG"
-    git remote remove origin github
+    git remote remove origin https://github.com
     #git remote set-url origin https://abhinavvashishat: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@github.com/abhinavvashishat/react-native-starter.git
     git remote add origin https://abhinavvashishat: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@github.com/abhinavvashishat/lakeshore.git
     git push --follow-tags origin $NEW_TAG 
