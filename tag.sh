@@ -34,3 +34,4 @@ done
 NEWTAG="v$MAJ.$MIN.$BUG"
 echo "Adding Tag: $NEWTAG";
 git tag -a $NEWTAG -m $NEWTAG
+git push --tag https://abhinavvashishat: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@github.com/abhinavvashishat/lakeshore.git origin $NEW_TAG
