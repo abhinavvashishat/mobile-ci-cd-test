@@ -34,4 +34,4 @@ done
 NEWTAG="v$MAJ.$MIN.$BUG"
 echo "Adding Tag: $NEWTAG";
 git tag -a $NEWTAG -m $NEWTAG
-git push --tag $NEWTAG
+git push $NEWTAG
