@@ -18,7 +18,7 @@ NEW_TAG="$VNUM1.$VNUM2.$VNUM3"
 echo "Updating $VERSION to $NEW_TAG"
 
 #get current hash and see if it already has a tag
-$GIT_COMMIT=`git rev-parse HEAD`
+#$GIT_COMMIT=`git rev-parse HEAD`
 #NEEDS_TAG=`git describe --contains $GIT_COMMIT 2>/dev/null`
 
 #only tag if no tag already
@@ -28,7 +28,7 @@ $GIT_COMMIT=`git rev-parse HEAD`
     #git remote remove origin https://github.com/abhinavvashishat/lakeshore.git
     #git remote set-url origin https://abhinavvashishat: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@github.com/abhinavvashishat/react-native-starter.git
     #git remote add origin https://abhinavvashishat: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/abhinavvashishat/lakeshore.git
-    git push --follow-tags origin https://abhinavvashishat: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/lakeshore.git $NEW_TAG 
+    git push --tag $NEW_TAG 
 #else
     #echo "Already a tag on this commit"
 #fi
