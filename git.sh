@@ -30,5 +30,5 @@ if [ -z "$NEEDS_TAG" ]; then
     #git remote add origin https://abhinavvashishat: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/abhinavvashishat/lakeshore.git
     git push https://abhinavvashishat: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@github.com/abhinavvashishat/lakeshore.git --tags 
 else
-    #echo "Already a tag on this commit"
+    echo "Already a tag on this commit"
 fi
