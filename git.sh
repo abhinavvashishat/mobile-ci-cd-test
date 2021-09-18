@@ -17,18 +17,18 @@ NEW_TAG="$VNUM1.$VNUM2.$VNUM3"
 
 echo "Updating $VERSION to $NEW_TAG"
 
-#get current hash and see if it already has a tag
-#$GIT_COMMIT=`git rev-parse HEAD`
-#NEEDS_TAG=`git describe --contains $GIT_COMMIT 2>/dev/null`
+get current hash and see if it already has a tag
+$GIT_COMMIT=`git rev-parse HEAD`
+NEEDS_TAG=`git describe --contains $GIT_COMMIT 2>/dev/null`
 
-#only tag if no tag already
-#if [ -z "$NEEDS_TAG" ]; then
+only tag if no tag already
+if [ -z "$NEEDS_TAG" ]; then
     git tag -a $NEW_TAG -m $NEW_TAG
     echo "Tagged with $NEW_TAG"
     #git remote remove origin https://github.com/abhinavvashishat/lakeshore.git
     #git remote set-url origin https://github.com/abhinavvashishat/lakeshore.git
     #git remote add origin https://abhinavvashishat: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/abhinavvashishat/lakeshore.git
     git push https://abhinavvashishat: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@github.com/abhinavvashishat/lakeshore.git --tags 
-#else
+else
     #echo "Already a tag on this commit"
-#fi
+fi
