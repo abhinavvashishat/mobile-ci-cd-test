@@ -28,7 +28,7 @@ echo "Updating $VERSION to $NEW_TAG"
     #git remote remove origin https://github.com/abhinavvashishat/lakeshore.git
     #git remote set-url origin https://github.com/abhinavvashishat/lakeshore.git
     #git remote add origin https://abhinavvashishat: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/abhinavvashishat/lakeshore.git
-    git push https://abhinavvashishat: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/abhinavvashishat/lakeshore.git --tags 
+    git push https://abhinavvashishat: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@github.com/abhinavvashishat/lakeshore.git --tags 
 #else
     #echo "Already a tag on this commit"
 #fi
