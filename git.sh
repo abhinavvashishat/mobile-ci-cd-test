@@ -7,13 +7,13 @@ VERSION=`git describe --abbrev=0 --tags`
 VERSION_BITS=(${VERSION//./ })
 
 #get number parts and increase last one by 1
-VNUM1=${VERSION_BITS[0]}
-VNUM2=${VERSION_BITS[1]}
-VNUM3=${VERSION_BITS[2]}
-VNUM3=$((VNUM3+1))
+NUM1=${VERSION_BITS[0]}
+NUM2=${VERSION_BITS[1]}
+NUM3=${VERSION_BITS[2]}
+NUM3=$((NUM3+1))
 
 #create new tag
-NEW_TAG="$VNUM1.$VNUM2.$VNUM3"
+NEW_TAG="$NUM1.$NUM2.$NUM3"
 
 echo "Updating $VERSION to $NEW_TAG"
 
