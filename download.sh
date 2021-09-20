@@ -2,7 +2,7 @@
 
 USER=abhinav.vashishat
 APP=Developer
-appcenter build branches show=$Status
+#appcenter build branches show=$Status
 TEAM_APP='abhinav.vashishat/Developer'
 if [ "$Status" != "Succeeded" ]; then
 for i in {1} #downloads data from builds #1 - #10
