@@ -3,14 +3,17 @@
 USER=abhinav.vashishat
 APP=Developer
 TEAM_APP='abhinav.vashishat/Developer'
-BUILD='appcenter build branches show -b master'
-if [ "$BUILD" != "Succeeded" ]; then
-for i in {id=$BUILD.Build_ID} #downloads data from builds #1 - #10
+appcenter build branches show -b master
+while read line; do
+Build_Id='echo $line'
+if [ "$Buid_Id" != "Succeeded" ]; then
+for i in {id=Build_Id} #downloads data from builds #1 - #10
 do
-   #eval appcenter build download --id "$Build id" --app $TEAM_APP --type "logs"    
-   eval appcenter build download --id "$id" --app $TEAM_APP --type "build" #uncomment to download app packages
-   #eval appcenter build download --id "$Build id" --app $TEAM_APP --type "symbols" #uncomment to download symbols
-done   
+   #eval appcenter build download --id "$Build_id" --app $TEAM_APP --type "logs"    
+   e#val appcenter build download --id "$Build_id" --app $TEAM_APP --type "build" #uncomment to download app packages
+   #eval appcenter build download --id "$Build_id" --app $TEAM_APP --type "symbols" #uncomment to download symbols
+done  
 else
     Build Failed
 fi
+done
