@@ -3,7 +3,7 @@
 USER=abhinav.vashishat
 APP=Developer
 TEAM_APP='abhinav.vashishat/Developer'
-BUILD=$('appcenter build branches show -b master')
+appcenter build branches show -b master=BUILD
 if [ "$BUILD" != "Succeeded" ]; then
 for i in {id=$BUILD.Build_ID} #downloads data from builds #1 - #10
 do
