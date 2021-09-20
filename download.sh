@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -x
 USER=abhinav.vashishat
 APP=Developer
 TEAM_APP='abhinav.vashishat/Developer'
