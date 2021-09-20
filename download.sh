@@ -10,7 +10,7 @@ if [ "$Buid_Id" != "Succeeded" ]; then
 for i in {id=Build_Id} #downloads data from builds #1 - #10
 do
    #eval appcenter build download --id "$Build_id" --app $TEAM_APP --type "logs"    
-   e#val appcenter build download --id "$Build_id" --app $TEAM_APP --type "build" #uncomment to download app packages
+   eval appcenter build download --id "$Build_Id" --app $TEAM_APP --type "build" #uncomment to download app packages
    #eval appcenter build download --id "$Build_id" --app $TEAM_APP --type "symbols" #uncomment to download symbols
 done  
 else
