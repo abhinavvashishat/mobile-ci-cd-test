@@ -13,7 +13,7 @@ echo "Getting next version"
 nextversion="$(source semtag final -fos $SCOPE)"
 echo "Publishing with version: $nextversion"
 
-# We replace the placeholder in the source with the new version
+# We replace the placeholder in the source with the new version.
 replace="s/^PROG_VERSION=\"[^\"]*\"/PROG_VERSION=\"$nextversion\"/g"
 sed -i.bak $replace semtag
 # We replace the version in the README file with the new version
